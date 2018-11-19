@@ -21,16 +21,7 @@
           <!-- Build an executable WAR -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <configuration>
-          <attachClasses>true</attachClasses>
-          <webXml>target/web.xml</webXml>
-          <webResources>
-              <resource>
-                  <directory>src/main</directory>
-                  <filtering>true</filtering>
-              </resource>
-          </webResources>
-        </configuration>
+        <version>3.2.2</version>
       </plugin>
     </plugins>
   </build>
