@@ -18,18 +18,18 @@
   <build>
     <plugins>
       <plugin>
-        <!-- Build an executable JAR -->
+          <!-- Build an executable WAR -->
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
+        <artifactId>maven-war-plugin</artifactId>
         <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.mycompany.app.App</mainClass>
-            </manifest>
-          </archive>
+          <attachClasses>true</attachClasses>
+          <webXml>target/web.xml</webXml>
+          <webResources>
+              <resource>
+                  <directory>src/main</directory>
+                  <filtering>true</filtering>
+              </resource>
+          </webResources>
         </configuration>
       </plugin>
     </plugins>
